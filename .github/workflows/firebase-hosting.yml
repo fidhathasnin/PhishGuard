@@ -1,0 +1,42 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: |
+          if [ -f "angular.json" ]; then
+            npm run build -- --output-path=dist
+          elif [ -f "vue.config.js" ]; then
+            npm run build
+          elif [ -f "package.json" ]; then
+            npm run build
+          else
+            echo "No recognizable frontend framework config found"
+            exit 1
+          fi
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PHISHGUARD_CBAB3 }}
+        run: firebase deploy --only hosting
