@@ -1,1 +1,2 @@
+console.log("PhishGuard initialized!");
 
