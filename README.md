@@ -84,7 +84,7 @@ npm run deploy
 
 ## 📸 Screenshots
 
-*(Add screenshots or GIFs of your site here)*
+![PhishGuard UI](./Capture.PNG)
 
 ## 👩‍💻 Developed By
 
