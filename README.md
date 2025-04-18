@@ -87,6 +87,8 @@ npm run deploy
 ## 📸 Screenshots
 
 ![PhishGuard UI](./Capture.PNG)
+![PhishGuard UI](./Capture1.PNG)
+![PhishGuard UI](./Capture2.PNG)
 
 ## 👩‍💻 Developed By
 
