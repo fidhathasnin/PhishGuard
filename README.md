@@ -1,8 +1,10 @@
 # 🛡️ PhishGuard - Phishing Website Detection Tool
+![PhishGuard Banner](Banner1.png)
+
 
 PhishGuard is a web-based phishing detection system that helps users identify and avoid malicious websites. Built with React and hosted using GitHub Pages, PhishGuard checks URLs for suspicious patterns and informs users whether a website is safe or potentially a phishing attempt.
 
-![PhishGuard Banner](https://your-image-link-if-any) <!-- Optional banner -->
+
 
 ## 🚀 Live Demo
 
